@@ -1,0 +1,152 @@
+------------------ TABLE PERSON --------------------
+
+
+-- CREATE TABLE person(
+-- 	id SERIAL PRIMARY KEY,
+--   name TEXT,
+--   age INTEGER,
+--   height INTEGER,
+--   city TEXT, 
+--   favorite_color TEXT
+-- );
+
+-- INSERT INTO person 
+-- (name, age, height, city, favorite_color)
+--   VALUES
+--   ('Daniel', 25 , 180,'Orem','Yellow'), ('Josh', 20 , 80,'Springville','Red'), ('Johnny', 18, 170,'Cinncinnati','Blue'),('Danielle', 24, 160,'Mentor','Yellow'),('Ashley', 28, 155,'Salt Lake City','Green');
+  
+-- SELECT * FROM person 
+-- ORDER BY height ASC;
+
+-- SELECT * FROM person 
+-- ORDER BY height DESC;
+
+-- SELECT * FROM person 
+-- ORDER BY age DESC;
+
+-- SELECT * FROM person 
+-- WHERE age > 20;
+
+-- SELECT * FROM person 
+-- WHERE age = 18;
+
+-- SELECT * FROM person 
+-- WHERE age < 20 OR age > 30;
+
+-- SELECT * FROM person 
+-- WHERE age != 27;
+
+-- SELECT * FROM person 
+-- WHERE favorite_color != 'Red';
+
+-- SELECT * FROM person 
+-- WHERE favorite_color != 'Red' AND favorite_color != 'Blue';
+
+-- SELECT * FROM person 
+-- WHERE favorite_color = 'Orange' OR favorite_color = 'Green';
+
+-- SELECT * FROM person 
+-- WHERE favorite_color IN ('Orange', 'Green', 'Blue');
+
+-- SELECT * FROM person 
+-- WHERE favorite_color IN ('Yellow', 'Purple');
+
+
+------------------ TABLE ORDERS --------------------
+
+
+-- CREATE TABLE orders(
+-- 	order_id SERIAL PRIMARY KEY,
+--   person_id INTEGER,
+--   product_name TEXT,
+--   product_price INTEGER, 
+--   quantity INTEGER
+-- );
+
+-- INSERT INTO orders 
+-- (person_id, product_name, product_price, quantity)
+--   VALUES
+--   (1 , 'Macbook', 1500, 11), (2 , 'Car', 20000, 1), (3, 'burrito', 2, 8), (2, 'doge coin', 1, 11500), (3, 'house', 210000, 1);
+
+-- SELECT * FROM orders;
+
+-- SELECT SUM(quantity) FROM orders;
+
+-- SELECT SUM(product_price) FROM orders;
+
+-- SELECT SUM(product_price * quantity) FROM orders
+-- WHERE person_id = 1;
+
+
+------------------ TABLE ARTIST --------------------
+
+
+-- INSERT INTO artist 
+-- (name)
+--   VALUES
+--   ('Zelda'),
+--    ('Apollo'),
+--    ('Dwight');
+
+-- SELECT * FROM artist
+-- ORDER BY name DESC
+-- LIMIT 10;
+
+-- SELECT * FROM artist
+-- ORDER BY name ASC
+-- LIMIT 5;
+
+-- SELECT * FROM artist
+-- WHERE name LIKE 'Black%';
+  
+--   SELECT * FROM artist
+-- WHERE name LIKE '%Black%';
+
+
+------------------ TABLE EMPLOYEE --------------------
+
+
+-- SELECT (first_name, last_name) FROM employee
+-- WHERE city = 'Calgary';
+
+-- SELECT (birth_date) FROM employee 
+-- ORDER BY birth_date DESC
+-- LIMIT 1;
+
+-- SELECT (birth_date) FROM employee 
+-- ORDER BY birth_date ASC
+-- LIMIT 1;
+
+-- SELECT * FROM employee
+-- WHERE reports_to = 2;
+
+-- SELECT count(*) FROM employee
+-- WHERE city = 'Lethbridge';
+
+------------------ TABLE INVOICE --------------------
+
+
+-- SELECT count(*) FROM invoice
+-- WHERE billing_country = 'USA';
+
+-- SELECT * FROM invoice
+-- ORDER BY total DESC
+-- LIMIT 1;
+
+-- SELECT * FROM invoice
+-- ORDER BY total ASC
+-- LIMIT 1;
+
+-- SELECT * FROM invoice
+-- WHERE total > 5;
+
+-- SELECT count(*) FROM invoice
+-- WHERE total > 5;
+
+-- SELECT count(*) FROM invoice
+-- WHERE billing_state IN ('CA', 'TX', 'AZ');
+
+-- SELECT avg(total) FROM invoice;
+
+
+-- SELECT SUM(total) FROM invoice;
